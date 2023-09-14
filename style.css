@@ -221,8 +221,22 @@ section {
   height: 400px;
   width: 400px;
   margin: auto 0;
+  animation: deplacementHorizontal 10s infinite;
 }
-
+@keyframes deplacementHorizontal {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-10px, -5px);
+  }
+  50% {
+    transform: translate(5px, 10px);
+  }
+  75% {
+    transform: translate(-6px, 3px);
+  }
+}
 .section__text {
   align-self: center;
   text-align: center;
@@ -239,6 +253,7 @@ section {
 .section__text__p2 {
   font-size: 1.75rem;
   margin-bottom: 1rem;
+  min-height:1.75rem;
 }
 
 .title {
