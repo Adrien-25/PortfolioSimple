@@ -254,7 +254,7 @@ section {
 .section__text__p2 {
   font-size: 1.75rem;
   margin-bottom: 1rem;
-  min-height:1.75rem;
+  min-height:30px;
 }
 
 .title {
