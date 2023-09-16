@@ -42,7 +42,6 @@ function toggleMenu() {
 }
 
 // Dark / light mode
-
 const btn = document.getElementById("modeToggle");
 const btn2 = document.getElementById("modeToggle2");
 const themeIcons = document.querySelectorAll(".icon");
@@ -89,17 +88,12 @@ function setLightMode() {
 }
 
 // div .presentation
-
 function isElementInMiddleOfScreen() {
   const element = document.querySelector(".presentation > span");
   if (!element) return false;
   const rect = element.getBoundingClientRect();
   const windowHeight = window.innerHeight;
-  // console.log(rect.bottom);
-  // console.log(windowHeight);
   return rect.bottom >= 0 && rect.bottom <= windowHeight;
-  // return rect.top >= 0 && rect.top <= windowHeight;
-  // return rect.top <= windowHeight / 2 && rect.bottom >= windowHeight / 2;
 }
 function activateOnMiddleOfScreen() {
   if (isElementInMiddleOfScreen()) {
