@@ -1,8 +1,11 @@
-
-const textContainer = document.querySelector('.section__text__p2');
-const texts = ["Développeur Web Fullstack", "Architecte du Web", "Maître du clavier"];
+const textContainer = document.querySelector(".section__text__p2");
+const texts = [
+  "Développeur Web Fullstack",
+  "Architecte du Web",
+  "Maître du clavier",
+];
 let currentTextIndex = 0;
-let currentText = '';
+let currentText = "";
 let isWriting = true;
 
 function writeAndEraseText() {
@@ -16,7 +19,7 @@ function writeAndEraseText() {
       setTimeout(writeAndEraseText, 100); // Délai entre les lettres
     }
   } else {
-    if (currentText === '') {
+    if (currentText === "") {
       isWriting = true;
       currentTextIndex = (currentTextIndex + 1) % texts.length;
       setTimeout(writeAndEraseText, 0); // Délai avant de commencer à écrire la prochaine phrase
@@ -30,7 +33,7 @@ function writeAndEraseText() {
 
 writeAndEraseText();
 
-// Toggle menu hamburger 
+// Toggle menu hamburger
 function toggleMenu() {
   const menu = document.querySelector(".menu-links");
   const icon = document.querySelector(".hamburger-icon");
@@ -49,11 +52,11 @@ if (currentTheme === "dark") {
   setDarkMode();
 }
 
-btn.addEventListener("click", function() {
+btn.addEventListener("click", function () {
   setTheme();
 });
 
-btn2.addEventListener("click", function() {
+btn2.addEventListener("click", function () {
   setTheme();
 });
 
@@ -84,3 +87,45 @@ function setLightMode() {
     icon.src = icon.getAttribute("src-light");
   });
 }
+
+// div .presentation
+
+function isElementInMiddleOfScreen() {
+  const element = document.querySelector(".presentation > span");
+  if (!element) return false;
+  const rect = element.getBoundingClientRect();
+  const windowHeight = window.innerHeight;
+  // console.log(rect.bottom);
+  // console.log(windowHeight);
+  return rect.bottom >= 0 && rect.bottom <= windowHeight;
+  // return rect.top >= 0 && rect.top <= windowHeight;
+  // return rect.top <= windowHeight / 2 && rect.bottom >= windowHeight / 2;
+}
+function activateOnMiddleOfScreen() {
+  if (isElementInMiddleOfScreen()) {
+    console.log("La div est au milieu de l'écran !");
+    pourcentProgress();
+  }
+}
+function pourcentProgress() {
+  const presentationDiv = document.querySelector(".presentation > span");
+  if (!presentationDiv) return false;
+  const rect = presentationDiv.getBoundingClientRect();
+  const windowHeight = window.innerHeight;
+  var pourcentProgress = (rect.bottom  / (windowHeight-200)) * 100;
+  var pourcentProgressNega = ((rect.bottom  / (windowHeight)) * 100)*-1;
+  var pourcentProgressVrai=pourcentProgressNega+100;
+  console.log(Math.round(pourcentProgressVrai));
+  console.log((Math.round(pourcentProgress)));
+  pourcentProgressVrai=pourcentProgressVrai*1.5;
+  if (pourcentProgressVrai>100){
+    pourcentProgressVrai=100;
+  }
+  backgroundPositionX = `${Math.round(pourcentProgressVrai)}%`;
+  
+
+  presentationDiv.style.backgroundPositionX = backgroundPositionX;
+}
+
+window.addEventListener("scroll", activateOnMiddleOfScreen);
+activateOnMiddleOfScreen();
