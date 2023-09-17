@@ -50,7 +50,13 @@
   }
   #profile {
     height: 83vh;
+    height: unset;
+    min-height: unset;
     margin-bottom: 0;
+  }
+  #skills .skill-languages--2{
+    flex-direction: column;
+    gap: unset;
   }
   article {
     font-size: 1rem;

@@ -1,3 +1,4 @@
+// Writing text
 const textContainer = document.querySelector(".section__text__p2");
 const texts = [
   "Développeur Web Fullstack",
@@ -37,8 +38,10 @@ writeAndEraseText();
 function toggleMenu() {
   const menu = document.querySelector(".menu-links");
   const icon = document.querySelector(".hamburger-icon");
+  const bodyContent = document.querySelector("body");
   menu.classList.toggle("open");
   icon.classList.toggle("open");
+  bodyContent.classList.toggle("no-scroll");
 }
 
 // Dark / light mode
@@ -97,7 +100,7 @@ function isElementInMiddleOfScreen() {
 }
 function activateOnMiddleOfScreen() {
   if (isElementInMiddleOfScreen()) {
-    console.log("La div est au milieu de l'écran !");
+    // console.log("La div est au milieu de l'écran !");
     pourcentProgress();
   }
 }
@@ -109,8 +112,8 @@ function pourcentProgress() {
   var pourcentProgress = (rect.bottom  / (windowHeight-200)) * 100;
   var pourcentProgressNega = ((rect.bottom  / (windowHeight)) * 100)*-1;
   var pourcentProgressVrai=pourcentProgressNega+100;
-  console.log(Math.round(pourcentProgressVrai));
-  console.log((Math.round(pourcentProgress)));
+  // console.log(Math.round(pourcentProgressVrai));
+  // console.log((Math.round(pourcentProgress)));
   pourcentProgressVrai=pourcentProgressVrai*1.5;
   if (pourcentProgressVrai>100){
     pourcentProgressVrai=100;

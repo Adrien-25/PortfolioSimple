@@ -59,8 +59,8 @@ p {
   color: var(--secondary-color-2);
 }
 
-.text-center{
-  text-align: center!important;
+.text-center {
+  text-align: center !important;
 }
 /* TRANSITION */
 
@@ -70,7 +70,9 @@ a,
 }
 
 /* DESKTOP NAV */
-
+.no-scroll {
+  overflow-y: hidden;
+}
 nav,
 .nav-links {
   display: flex;
@@ -406,30 +408,33 @@ section {
   font-size: 1.2rem;
   max-width: 800px;
 }
-#skills .skills-languages{
-  margin-top:40px;
+#skills .skills-languages {
+  margin-top: 40px;
 }
-#skills .skills-languages > h3{
+#skills .skills-languages > h3 {
   margin-bottom: 20px;
 }
-#skills .skills-languages > .skills-languages-container{
+#skills .skills-languages > .skills-languages-container {
   display: flex;
-  gap:25px;
+  gap: 25px;
   align-items: center;
   flex-wrap: wrap;
 }
-#skills .skills-languages > .skills-languages-container .skills-svg-container > svg{
+#skills
+  .skills-languages
+  > .skills-languages-container
+  .skills-svg-container
+  > svg {
   width: 50px;
   height: 50px;
 }
-#skills .skills-languages .skills-svg{
+#skills .skills-languages .skills-svg {
   width: 50px;
   height: 50px;
 }
-#skills  .skill-languages--2{
-  display :flex;
+#skills .skill-languages--2 {
+  display: flex;
   gap: 100px;
-  
 }
 
 /* ABOUT SECTION */
