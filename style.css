@@ -418,6 +418,10 @@ section {
   align-items: center;
   flex-wrap: wrap;
 }
+#skills .skills-languages > .skills-languages-container .skills-svg-container > svg{
+  width: 50px;
+  height: 50px;
+}
 #skills .skills-languages .skills-svg{
   width: 50px;
   height: 50px;
