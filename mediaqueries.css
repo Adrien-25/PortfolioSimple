@@ -42,12 +42,18 @@
     height: 275px;
     margin: 0 auto 2rem;
   }
+  .presentation{
+    font-size: 35px;
+  }
   .about-containers {
     margin-top: 0;
   }
 }
 
 @media screen and (max-width: 600px) {
+  .presentation{
+    font-size: 30px;
+  }
   #contact,
   footer {
     height: 40vh;

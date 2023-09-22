@@ -104,7 +104,8 @@ nav {
   height: 1px;
   position: absolute;
   transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
-  background-color: rgb(0, 0, 0);
+  /* background-color: rgb(0, 0, 0); */
+  background-color:   var(--secondary-color);
   transform: translate3d(0%, -50%, 0px) scaleX(0);
   transform-origin: left center;
   /* transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s; */
@@ -241,7 +242,7 @@ nav a:hover {
 /* SECTIONS */
 
 section {
-  padding-top: 4vh;
+  padding: 70px 0;
   /* height: 96vh; */
   margin: 0 5%;
   box-sizing: border-box;
@@ -378,14 +379,14 @@ section {
 /* Presentation SECTION */
 .presentation {
   max-width: 95%;
-  font-size: 30px; 
+  /* font-size: 30px; */
+  font-size: 40px;
   margin: 100px auto;
   text-align: center;
   line-height: 1.6;
   font-family: "Poppins";
   font-weight: bold;
   color: var(--secondary-color);
-  
 }
 .presentation span {
   background: linear-gradient(
@@ -429,7 +430,12 @@ section {
   justify-content: center;
   border-radius: 100%;
   box-shadow: 8px 8px 24px 0px rgb(0 0 0 / 30%);
+  transition: all 300ms ease;
 }
+#skills .skills-svg-container:hover {
+  transform: scale(1.1);
+}
+
 #skills
   .skills-languages
   > .skills-languages-container
