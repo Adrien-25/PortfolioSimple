@@ -378,27 +378,27 @@ section {
 /* Presentation SECTION */
 .presentation {
   max-width: 95%;
-  font-size: 3vw;
+  font-size: 30px; 
   margin: 100px auto;
   text-align: center;
   line-height: 1.6;
   font-family: "Poppins";
   font-weight: bold;
   color: var(--secondary-color);
-  > span {
-    background: linear-gradient(
-      90deg,
-      var(--secondary-color) 0%,
-      var(--secondary-color) 50%,
-      #ff0000 50%,
-      #ff0000 100%
-    );
-    background-size: 200% 100%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+  
 }
-
+.presentation span {
+  background: linear-gradient(
+    90deg,
+    var(--secondary-color) 0%,
+    var(--secondary-color) 50%,
+    #ff0000 50%,
+    #ff0000 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 /* SKILLS SECTION */
 #skills {
 }
@@ -420,13 +420,23 @@ section {
   align-items: center;
   flex-wrap: wrap;
 }
+#skills .skills-svg-container {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  box-shadow: 8px 8px 24px 0px rgb(0 0 0 / 30%);
+}
 #skills
   .skills-languages
   > .skills-languages-container
   .skills-svg-container
   > svg {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
 }
 #skills .skills-languages .skills-svg {
   width: 50px;
