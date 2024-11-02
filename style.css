@@ -15,7 +15,8 @@
   --primary-color: black;
   --primary-color-2: rgb(39, 39, 39);
   --primary-color-3: rgb(74, 74, 74);
-  --background-color: black;
+  /* --background-color: black; */
+  --background-color: rgb(33, 33, 33);
   --secondary-color: white;
   --secondary-color-2: rgb(170, 170, 170);
   --button-background: rgb(202, 202, 202);
@@ -32,8 +33,8 @@
   --primary-color-3: rgb(181, 181, 181);
   --background-color: rgb(255, 255, 255);
   --secondary-color: black;
-  /* --secondary-color-2: rgb(85, 85, 85); */
-  --secondary-color-2: white;
+  --secondary-color-2: rgb(85, 85, 85);
+  /* --secondary-color-2: white; */
   --button-background: rgb(53, 53, 53);
   --button-text-hover: grey;
   --button-border: rgb(53, 53, 53) 0.1rem solid;
@@ -93,6 +94,7 @@ html {
 
 p {
   color: var(--secondary-color-2);
+  /* color: var(--secondary-color); */
 }
 
 .text-center {
@@ -410,22 +412,33 @@ section {
   margin-top: 1rem;
   gap: 1rem;
 }
-.scroll-button{
+.scroll-button {
   position: absolute;
   bottom: 20px;
-  left: calc(50% - 35px);
+  left: calc(50% - 20px);
 }
- .scroll-button .svg-light {
-  display: none;
+
+/* body[theme="light"] .scroll-button svg {
+  fill: var(--secondary-color);
 }
- .scroll-button .svg-dark{
-  display: none;
+body[theme="dark"] .scroll-button svg {
+  fill: var(--secondary-color);
+} */
+
+.scroll-button svg {
+  fill: var(--secondary-color);
+  animation: scrollUpDown 3s ease-in-out infinite;
+
 }
-body[theme="light"] .scroll-button .svg-dark{
-  display: block;
-}
-body[theme="dark"] .scroll-button .svg-light{
-  display: block;
+@keyframes scrollUpDown {
+  0%,
+  100% {
+    transform: translateY(-10px);
+
+  }
+  50% {
+    transform: translateY(10px);
+  }
 }
 
 /* ICONS */
