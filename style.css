@@ -373,6 +373,14 @@ section {
   margin-top: 1rem;
   gap: 1rem;
 }
+#socials-container a{
+
+}
+#socials-container a svg {
+  fill: var(--secondary-color);
+  width: 35px;
+  height: 35px;
+}
 .scroll-button {
   position: absolute;
   bottom: 20px;
