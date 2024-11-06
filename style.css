@@ -176,8 +176,8 @@ nav a:hover {
 }
 #hamburger-nav.scrolled,
 #desktop-nav.scrolled {
-  /* background-color: var(--background-color); */
-  background-color: var(--primary-color);
+  background-color: var(--background-color);
+  /* background-color: var(--primary-color); */
 
   /* box-shadow: 0 4px 10px var(--secondary-color); */
 }
