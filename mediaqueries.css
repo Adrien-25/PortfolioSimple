@@ -19,8 +19,8 @@
     max-width: 40px;
   }
 
-  #experience,
-  .experience-details-container {
+  
+  .projects-details-container {
     margin-top: 2rem;
   }
   #profile,
@@ -85,7 +85,7 @@
     height: fit-content;
     margin-bottom: 2rem;
   }
-  .about-containers,
+  .projects-containers,
   .contact-info-upper-container,
   .btn-container {
     flex-wrap: wrap;
@@ -97,9 +97,7 @@
   .nav-links li a {
     font-size: 1rem;
   }
-  .experience-sub-title {
-    font-size: 1.25rem;
-  }
+
   .logo {
     font-size: 1.5rem;
   }
