@@ -276,8 +276,9 @@ nav a:hover {
   transform: none;
 }
 
-/* SECTIONS */
-
+/*---------------------------------------------------
+  SECTIONS
+*/
 section {
   padding: 70px 0;
   /* height: 96vh; */
@@ -290,7 +291,9 @@ section {
   display: flex;
 }
 
-/* PROFILE SECTION */
+/*---------------------------------------------------
+  PROFILE SECTION
+*/
 #profile {
   display: flex;
   justify-content: center;
@@ -373,8 +376,7 @@ section {
   margin-top: 1rem;
   gap: 1rem;
 }
-#socials-container a{
-
+#socials-container a {
 }
 #socials-container a svg {
   fill: var(--secondary-color);
@@ -397,28 +399,28 @@ body[theme="dark"] .scroll-button svg {
 .scroll-button svg {
   fill: var(--secondary-color);
   animation: scrollUpDown 3s ease-in-out infinite;
-
 }
 @keyframes scrollUpDown {
   0%,
   100% {
     transform: translateY(-10px);
-
   }
   50% {
     transform: translateY(10px);
   }
 }
 
-/* ICONS */
-
+/*---------------------------------------------------
+  ICONS
+*/
 .icon {
   cursor: pointer;
   height: 2rem;
 }
 
-/* BUTTONS */
-
+/*---------------------------------------------------
+  BUTTONS
+*/
 .btn-container {
   display: flex;
   justify-content: center;
@@ -466,31 +468,10 @@ body[theme="dark"] .scroll-button svg {
 .btn-container {
   gap: 1rem;
 }
-/* Presentation SECTION */
-.presentation {
-  max-width: 95%;
-  /* font-size: 30px; */
-  font-size: 40px;
-  margin: 100px auto;
-  text-align: center;
-  line-height: 1.6;
-  font-family: "Poppins";
-  font-weight: bold;
-  color: var(--secondary-color);
-}
-.presentation span {
-  background: linear-gradient(
-    90deg,
-    var(--secondary-color) 0%,
-    var(--secondary-color) 50%,
-    #ff0000 50%,
-    #ff0000 100%
-  );
-  background-size: 200% 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-/* SKILLS SECTION */
+
+/*---------------------------------------------------
+  SKILLS Section
+*/
 #skills {
 }
 #skills .sills-intro {
@@ -543,12 +524,35 @@ body[theme="dark"] .scroll-button svg {
   gap: 100px;
 }
 
-/* ABOUT SECTION */
-
+/*---------------------------------------------------
+  ABOUT Section
+*/
 #about {
   position: relative;
 }
-
+.presentation {
+  max-width: 95%;
+  /* font-size: 30px; */
+  font-size: 40px;
+  margin: 100px auto;
+  text-align: center;
+  line-height: 1.6;
+  font-family: "Poppins";
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+.presentation span {
+  background: linear-gradient(
+    90deg,
+    var(--secondary-color) 0%,
+    var(--secondary-color) 50%,
+    #ff0000 50%,
+    #ff0000 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .about-containers {
   gap: 2rem;
   margin-bottom: 2rem;
@@ -596,8 +600,9 @@ body[theme="dark"] .scroll-button svg {
   margin: auto 0;
 }
 
-/* EXPERIENCE SECTION */
-
+/*---------------------------------------------------
+  EXPERIENCE Section
+*/
 #experience {
   position: relative;
 }
@@ -635,8 +640,9 @@ article .icon {
   cursor: default;
 }
 
-/* PROJECTS SECTION */
-
+/*---------------------------------------------------
+  PROJECTS Section
+*/
 #projects {
   position: relative;
 }
@@ -703,8 +709,9 @@ article .icon {
   border-color: var(--container-border);
 }
 
-/* CONTACT */
-
+/*---------------------------------------------------
+  CONTACT Section
+*/
 #contact {
   display: flex;
   justify-content: center;
@@ -769,8 +776,9 @@ article .icon {
   height: 2.5rem;
 }
 
-/* FOOTER SECTION */
-
+/*---------------------------------------------------
+  FOOTER Section
+*/
 footer {
   height: 26vh;
   margin: 0 1rem;
