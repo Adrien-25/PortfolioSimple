@@ -13,7 +13,8 @@
 */
 :root {
   --primary-color: #272727;
-  --background-color: rgb(33, 33, 33);
+  /* --background-color: rgb(33, 33, 33); */
+  --background-color: black;
   --secondary-color: white;
   --secondary-color-2: rgb(170, 170, 170);
   --button-background: rgb(202, 202, 202);
@@ -242,7 +243,8 @@ nav a:hover {
   display: block;
   padding: 10px;
   text-align: center;
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
+  font-size: 2rem;
   color: var(--secondary-color);
   text-decoration: none;
   transition: all 0.3s ease-in-out;
