@@ -167,45 +167,104 @@ window.onscroll = function () {
 /*---------------------------------------------------
   CANVAS TERMINAL EFFECT
 */
-// script.js
+// // script.js
+// const canvas = document.getElementById("canvas");
+// const ctx = canvas.getContext("2d");
+
+// canvas.width = window.innerWidth;
+// canvas.height = window.innerHeight;
+
+// // Caractères à utiliser pour l'effet terminal
+// const characters = "abcdefghijklmnopqrstuvwxyz,"; // Caractères spécifiés
+
+// // Paramètres de mise en page
+// const lineHeight = 15; // Réduit la hauteur entre chaque ligne (de 20 à 10)
+// const columns = Math.floor(canvas.width / 15); // Nombre de colonnes en fonction de la largeur du canvas
+// const rows = Math.floor(canvas.height / lineHeight); // Nombre de lignes en fonction de la hauteur du canvas
+
+// // Créer un tableau pour stocker les caractères
+// let characterMatrix = [];
+
+// // Initialiser la matrice de caractères avec des caractères aléatoires et des espaces
+// for (let i = 0; i < rows; i++) {
+//   characterMatrix[i] = [];
+//   for (let j = 0; j < columns; j++) {
+//     // Ajouter un espace aléatoirement
+//     if (Math.random() < 0.6) {
+//       // 60% de chance de mettre un espace (augmenter de 40% à 60%)
+//       characterMatrix[i][j] = " "; // Un espace
+//     } else {
+//       characterMatrix[i][j] =
+//         characters[Math.floor(Math.random() * characters.length)];
+//     }
+//   }
+// }
+
+// // Fonction pour dessiner des caractères en lignes
+// function drawRandomCharacters() {
+//   ctx.clearRect(0, 0, canvas.width, canvas.height); // Effacer le canvas
+
+//   for (let i = 0; i < rows; i++) {
+//     for (let j = 0; j < columns; j++) {
+//       ctx.font = "13px Courier"; // Taille du texte
+//       ctx.fillStyle = "rgba(0, 255, 0, 0.7)"; // Couleur des caractères
+//       ctx.fillText(characterMatrix[i][j], j * 15, i * lineHeight); // Dessiner le caractère
+//     }
+//   }
+
+//   // Mettre à jour les caractères aléatoirement
+//   for (let i = 0; i < rows; i++) {
+//     for (let j = 0; j < columns; j++) {
+//       // 30% de chance de changer un caractère ou de le rendre vide (augmenter de 20% à 30%)
+//       if (Math.random() < 0.3) {
+//         // Pour remplacer par un espace ou un caractère aléatoire
+//         characterMatrix[i][j] =
+//           Math.random() < 0.6
+//             ? " "
+//             : characters[Math.floor(Math.random() * characters.length)];
+//       }
+//     }
+//   }
+// }
+
+// // Créer des caractères à intervalles réguliers
+// setInterval(drawRandomCharacters, 50); // Générer des caractères toutes les 50 ms pour une mise à jour plus rapide
+
+
+
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
+const lineHeight = 15;
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+  // Mise à jour des paramètres
+  
+  const columns = Math.floor(canvas.width / 15);
+  const rows = Math.floor(canvas.height / lineHeight);
+  
+  // Réinitialise la matrice de caractères avec les nouvelles dimensions
+  characterMatrix = Array.from({ length: rows }, () => 
+    Array.from({ length: columns }, () => 
+      Math.random() < 0.6 ? " " : characters[Math.floor(Math.random() * characters.length)]
+    )
+  );
+}
 
 // Caractères à utiliser pour l'effet terminal
-const characters = "abcdefghijklmnopqrstuvwxyz,"; // Caractères spécifiés
-
-// Paramètres de mise en page
-const lineHeight = 15; // Réduit la hauteur entre chaque ligne (de 20 à 10)
-const columns = Math.floor(canvas.width / 15); // Nombre de colonnes en fonction de la largeur du canvas
-const rows = Math.floor(canvas.height / lineHeight); // Nombre de lignes en fonction de la hauteur du canvas
-
-// Créer un tableau pour stocker les caractères
+const characters = "abcdefghijklmnopqrstuvwxyz,";
 let characterMatrix = [];
 
-// Initialiser la matrice de caractères avec des caractères aléatoires et des espaces
-for (let i = 0; i < rows; i++) {
-  characterMatrix[i] = [];
-  for (let j = 0; j < columns; j++) {
-    // Ajouter un espace aléatoirement
-    if (Math.random() < 0.6) {
-      // 60% de chance de mettre un espace (augmenter de 40% à 60%)
-      characterMatrix[i][j] = " "; // Un espace
-    } else {
-      characterMatrix[i][j] =
-        characters[Math.floor(Math.random() * characters.length)];
-    }
-  }
-}
+// Appelle la fonction de redimensionnement une fois au démarrage
+resizeCanvas();
 
 // Fonction pour dessiner des caractères en lignes
 function drawRandomCharacters() {
   ctx.clearRect(0, 0, canvas.width, canvas.height); // Effacer le canvas
 
-  for (let i = 0; i < rows; i++) {
-    for (let j = 0; j < columns; j++) {
+  for (let i = 0; i < characterMatrix.length; i++) {
+    for (let j = 0; j < characterMatrix[i].length; j++) {
       ctx.font = "13px Courier"; // Taille du texte
       ctx.fillStyle = "rgba(0, 255, 0, 0.7)"; // Couleur des caractères
       ctx.fillText(characterMatrix[i][j], j * 15, i * lineHeight); // Dessiner le caractère
@@ -213,15 +272,11 @@ function drawRandomCharacters() {
   }
 
   // Mettre à jour les caractères aléatoirement
-  for (let i = 0; i < rows; i++) {
-    for (let j = 0; j < columns; j++) {
-      // 30% de chance de changer un caractère ou de le rendre vide (augmenter de 20% à 30%)
+  for (let i = 0; i < characterMatrix.length; i++) {
+    for (let j = 0; j < characterMatrix[i].length; j++) {
       if (Math.random() < 0.3) {
-        // Pour remplacer par un espace ou un caractère aléatoire
         characterMatrix[i][j] =
-          Math.random() < 0.6
-            ? " "
-            : characters[Math.floor(Math.random() * characters.length)];
+          Math.random() < 0.6 ? " " : characters[Math.floor(Math.random() * characters.length)];
       }
     }
   }
@@ -229,3 +284,6 @@ function drawRandomCharacters() {
 
 // Créer des caractères à intervalles réguliers
 setInterval(drawRandomCharacters, 50); // Générer des caractères toutes les 50 ms pour une mise à jour plus rapide
+
+// Redimensionne le canvas à chaque changement de taille de la fenêtre
+window.addEventListener("resize", resizeCanvas);
