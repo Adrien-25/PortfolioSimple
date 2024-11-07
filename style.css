@@ -42,7 +42,7 @@ h3 {
 }
 
 body {
-  /* font-family: "Poppins", sans-serif; */
+
   font-family: "Beauty", sans-serif;
   background-color: var(--background-color);
   /* background-color: black; */
@@ -378,7 +378,7 @@ section {
 #socials-container {
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: 2rem;
   gap: 1rem;
 }
 #socials-container a {
@@ -542,7 +542,7 @@ body[theme="dark"] .scroll-button svg {
   margin: 100px auto;
   text-align: center;
   line-height: 1.6;
-  font-family: "Poppins";
+  /* font-family: "Beauty"; */
   font-weight: bold;
   color: var(--secondary-color);
 }
