@@ -363,11 +363,21 @@ section {
   margin-top: 2rem;
   gap: 1rem;
 }
-
-#socials-container a svg {
-  fill: var(--secondary-color);
+#socials-container > a {
   width: 35px;
   height: 35px;
+}
+#socials-container a svg {
+  fill: var(--secondary-color);
+  /* width: 35px;
+  height: 35px; */
+  width: 100%;
+  height: 100%;
+  transition: all 300ms ease;
+}
+#socials-container > a:hover > svg {
+  transition: all 300ms ease;
+  fill: var(--button-background);
 }
 .scroll-button {
   position: absolute;
@@ -414,35 +424,23 @@ section {
   border-radius: 2rem;
 }
 
-.btn-color-1,
-.btn-color-2 {
+.btn-color-1 {
   border: var(--button-border);
-  color: var(--secondary-color-2);
-}
-
-.btn-color-1:hover,
-.btn-color-2:hover {
-  cursor: pointer;
-}
-
-.btn-color-1,
-.btn-color-2:hover {
-  background: var(--button-background);
   color: var(--primary-color);
+  background: var(--secondary-color);
 }
 
 .btn-color-1:hover {
-  background: var(--secondary-color);
+  background: var(--button-background);
 }
+/* .btn-color-1:hover {
+  cursor: pointer;
+} */
 
-.btn-color-2 {
-  background: none;
-}
-
-.btn-color-2:hover {
-  border: var(--button-border);
-  background: var(--secondary-color);
-}
+/* .btn-color-1 {
+  background: var(--button-background);
+  color: var(--primary-color);
+} */
 
 .btn-container {
   gap: 1rem;
@@ -451,8 +449,8 @@ section {
 /*---------------------------------------------------
   SKILLS Section
 */
-#skills {
-}
+/* #skills {
+} */
 #skills .sills-intro {
   line-height: 1.5;
   margin-top: 1rem;
