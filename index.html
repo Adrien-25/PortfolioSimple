@@ -16,8 +16,11 @@
 
 </head>
 
+<!-- CONTENU -->
+
 <body theme="dark">
   <div id="progress-bar"></div>
+  <!-- DESKTOP NAVBAR -->
   <nav id="desktop-nav">
     <!-- <div class="logo">Adrien Schmidt</div> -->
     <div class="logo">
@@ -36,6 +39,7 @@
       </ul>
     </div>
   </nav>
+  <!-- MOBILE NAVBAR -->
   <nav id="hamburger-nav">
     <div class="logo">
       <img src="./assets/icons/adrien-schmidt-developpeur.png" alt="Portfolio Développeur Web Annecy" />
@@ -58,6 +62,7 @@
       </div>
     </div>
   </nav>
+  <!-- PROFIL -->
   <section id="profile">
     <canvas id="canvas" class="absolute inset-0"></canvas>
     <div class="section__pic-container">
@@ -105,10 +110,12 @@
       </svg>
     </a>
   </section>
+  <!-- A PROPOS -->
   <section id="about" class="presentation">
-    Je suis un <span>perfectionniste</span> déterminé à atteindre
+    Je suis un <span>passionné</span> déterminé à atteindre
     l'excellence.
   </section>
+  <!-- COMPETENCES -->
   <section id="skills">
     <p class="section__text__p1">Ma boîte à outils</p>
     <h2 class="title">Compétences</h2>
@@ -334,7 +341,6 @@
 
       </div>
     </div>
-
     <div class="skill-languages--2">
       <div class="skills-languages">
         <h3>Base de données</h3>
@@ -458,20 +464,29 @@
       </div>
     </div>
   </section>
+  <!-- PROJECTS -->
   <section id="projects">
     <p class="section__text__p1">Mon travail en action</p>
     <h2 class="title">Projets</h2>
     <div class="projects-details-container">
       <div class="projects-containers">
+        <!-- CRYPTOSUIVI -->
         <a class="project-details" href="https://cryptosuivi.netlify.app/" target="_blank">
-          <img src="./assets/projects-preview/cryptotrack_mock.webp" alt="Cryptotrack" class="project-img" />
+          <img src="./assets/projects-preview/cryptotrack_mock.webp" alt="Preview Cryptotrack" class="project-img" />
           <div class="gradient-bg"></div>
           <div class="project-text">
             <h3>Cryptotrack</h3>
             <p>Plateforme de suivi des cryptomonnaies</p>
           </div>
         </a>
-
+        <a class="project-details" href="https://matodo.adrienschmidt.com/" target="_blank">
+          <img src="./assets/projects-preview/matodo.webp" alt="Preview MaTodo" class="project-img" />
+          <div class="gradient-bg"></div>
+          <div class="project-text">
+            <h3>MaToDo</h3>
+            <p>Appli de gestion des tâches</p>
+          </div>
+        </a>
         <a class="project-details" href="https://calcfacile.netlify.app/" target="_blank">
           <img src="./assets/projects-preview/calculator.webp" alt="Calculatrice Web Interactive" class="project-img" />
           <div class="gradient-bg"></div>
@@ -480,17 +495,18 @@
             <p>Calculatrice Web Interactive</p>
           </div>
         </a>
-        <a class="project-details" href="https://timesavor.netlify.app/" target="_blank">
+        <!-- <a class="project-details" href="https://timesavor.netlify.app/" target="_blank">
           <img src="./assets/projects-preview/pomodoro_timer.webp" alt="Project 3" class="project-img" />
           <div class="gradient-bg"></div>
           <div class="project-text">
             <h3>Pomodoro timer</h3>
             <p>Timer Intelligent pour la Productivité</p>
           </div>
-        </a>
+        </a> -->
       </div>
     </div>
   </section>
+  <!-- CONTACT -->
   <section id="contact">
     <p class="section__text__p1">Vous avez un projet !</p>
     <h2 class="title">Contactez-moi</h2>
@@ -509,6 +525,7 @@
       </form>
     </div>
   </section>
+  <!-- FOOTER -->
   <footer>
     <nav>
       <div class="nav-links-container">
@@ -523,7 +540,6 @@
     <p>Copyright &#169; 2023 Adrien SCHMIDT.</p>
   </footer>
   <script src="script.js"></script>
-
 </body>
 
 </html>
